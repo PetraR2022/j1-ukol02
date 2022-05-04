@@ -34,6 +34,9 @@ public class HlavniProgram {
 
         nakresliKolecko(zofka, 5.0);
 
+        zofka.setLocation(100,100);
+        nakresliKolecko(zofka, 20.0);
+
 
 
     }
@@ -41,7 +44,7 @@ public class HlavniProgram {
     private void nakresliKolecko(Turtle turtle, double velikostStrany) {
         for (int i = 0; i < 17 ; i++) {
             turtle.move(velikostStrany);
-            turtle.turnRight(20);
+            turtle.turnRight(360/17);
 
         }
     }
