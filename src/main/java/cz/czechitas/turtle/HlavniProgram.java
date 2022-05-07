@@ -12,35 +12,85 @@ public class HlavniProgram {
         zofka = new Turtle();
         zofka.setPenColor(Color.black);
 
-
-        nakresliCtverecek(zofka, 100.0);
-
-        zofka.setLocation(200,200);
-
-        nakresliObdelnik(zofka, 200.0, 100.0 );
-
-        zofka.turnRight(90);
-        zofka.penUp();
-        zofka.move(600);
-        zofka.penDown();
+        zofka.setLocation(150,150);
         zofka.turnLeft(90);
 
-
+        // zmrzlina
         nakresliRovnostrannyTrojuhelnik(zofka, 100.0);
+        zofka.turnLeft(70);
+        nakresliKolecko(zofka, 18.0);
+
+        // sněhulák
+        zofka.penUp();
+        zofka.setLocation(400,50);
+        zofka.penDown();
+        nakresliKolecko(zofka, 10.0);
 
         zofka.penUp();
-        zofka.move(200);
+        zofka.setLocation(420,130);
         zofka.penDown();
-
-        nakresliKolecko(zofka, 5.0);
-
-        zofka.setLocation(100,100);
         nakresliKolecko(zofka, 20.0);
+
+        zofka.penUp();
+        zofka.setLocation(440,260);
+        zofka.penDown();
+        nakresliKolecko(zofka, 30.0);
+
+        zofka.penUp();
+        zofka.setLocation(310,110);
+        zofka.penDown();
+        nakresliKolecko(zofka, 10.0);
+        zofka.penUp();
+
+        zofka.penUp();
+        zofka.setLocation(470,110);
+        zofka.penDown();
+        nakresliKolecko(zofka, 10.0);
+        zofka.penUp();
+
+        //mašinka
+        zofka.setLocation(800,350);
+        zofka.penDown();
+        nakresliObdelnik(zofka, 200,100);
+
+        zofka.turnRight(180);
+        zofka.setLocation(900,350);
+
+        nakresliObdelnik(zofka, 100,200);
+
+        zofka.turnRight(200);
+        nakresliKolecko(zofka, 18.0);
+
+        zofka.penUp();
+        zofka.setLocation(670,370);
+        zofka.penDown();
+        nakresliKolecko(zofka, 8.0);
+
+        zofka.penUp();
+        zofka.setLocation(750,370);
+        zofka.penDown();
+        nakresliKolecko(zofka, 8.0);
+
+        zofka.penUp();
+        zofka.turnRight(45);
+        zofka.setLocation(600,300);
+        zofka.penDown();
+        nakresliRovnostrannyTrojuhelnik(zofka, 90);
+
+
+
+
+
+
+
+
+
+
 
 
 
     }
-
+// upravený úhel na 360/17
     private void nakresliKolecko(Turtle turtle, double velikostStrany) {
         for (int i = 0; i < 17 ; i++) {
             turtle.move(velikostStrany);
@@ -66,9 +116,7 @@ public class HlavniProgram {
         turtle.turnRight(90);
         turtle.move(sirkaStrany);
         turtle.turnRight(180);
-        turtle.penUp();
-        turtle.move(100);
-        turtle.turnRight(180);
+
     }
 
     private void nakresliCtverecek(Turtle turtle, double delkaStrany) {
